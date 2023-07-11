@@ -1,0 +1,4 @@
+name: blog
+channels:
+  - defaults
+prefix: /Users/daniel/miniconda3/envs/blog
