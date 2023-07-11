@@ -1,7 +1,7 @@
-create a new environment 
+create a new environment. This versión is compatible with pymongo
 
 ```sh
-conda create -n blog
+conda create -n blog_python3.9 python=3.9
 ```
 
 activate a environment 
