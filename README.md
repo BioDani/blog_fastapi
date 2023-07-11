@@ -1,13 +1,13 @@
 create a new environment 
 
 ```sh
-conda create -n name_env
+conda create -n blog
 ```
 
 activate a environment 
 
 ```sh
-conda activate name_env
+conda activate blog
 ```
 
 Remeber that `name_env` is equal to `blog`
