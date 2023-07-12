@@ -1,4 +1,4 @@
-def userSchema(item) -> dict:
+def userEntity(item) -> dict:
     return {
         'id' : item['id'],
         'name' : item['name'],
@@ -6,3 +6,6 @@ def userSchema(item) -> dict:
         'password' : item['password'],
         'about' : item['about']
     }
+    
+def usersEntity(entity) -> list:
+    [userEntity(item) for item in entity]
