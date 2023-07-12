@@ -1,7 +1,8 @@
 from fastapi import APIRouter
 from config.db import database
-from schemas.user_schema import userEntity, usersEntity
-from models.user_model import User
+from schemas.main import userEntity, usersEntity
+from models.main import User
+from passlib.hash import sha256_crypt
 
 user = APIRouter()
 
@@ -17,6 +18,7 @@ def find_user():
 @user.post('/users' ,tags= ['Create a new user'])
 def create_user( user: User):
     new_user = dict(user)
+    new_user['password']  = sha256_crypt.encrypt(new_user['password'])
     del new_user['id']
     id = database.users.insert_one(new_user).inserted_id
     user = database.users.find_one({'_id': id})
